@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1600.0" style="-fx-background-size: contain; -fx-background-position: center;" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <children>
+      <MenuBar maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+        <menus>
+          <Menu mnemonicParsing="false" text="_new Match">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#newVoid" text="Create" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="633.0" prefWidth="1527.0" style="-fx-background-size: contain; -fx-background-position: center;">
+         <children>
+            <Label fx:id="redName" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="255.0" prefWidth="606.0" style="-fx-background-color: red; -fx-alignment: center; -fx-background-size: contain; -fx-background-position: center;" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="51.0" />
+               </font></Label>
+            <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="255.0" prefWidth="500.0" style="-fx-background-size: contain; -fx-background-position: center;">
+               <children>
+                  <Label fx:id="timer" cacheShape="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onKeyPressed="#doTime" prefHeight="238.0" prefWidth="500.0" scaleShape="false" style="-fx-alignment: center; -fx-background-color: yellow; -fx-background-size: contain; -fx-background-position: center; -fx-font-size: 100;" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+                     <font>
+                        <Font size="11.0" />
+                     </font></Label>
+                  <Label fx:id="rounds" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="0.0" prefWidth="0.0" style="-fx-alignment: center; -fx-background-color: yellow; -fx-background-size: contain; -fx-background-position: center;" textAlignment="CENTER">
+                     <font>
+                        <Font size="96.0" />
+                     </font></Label>
+               </children></VBox>
+            <Label fx:id="blueName" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="255.0" prefWidth="606.0" style="-fx-background-color: blue; -fx-alignment: center; -fx-background-size: contain; -fx-background-position: center;" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="51.0" />
+               </font></Label>
+         </children>
+      </HBox>
+      <GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="895.0" prefWidth="1678.0" style="size: contain; -fx-background-position: center;">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="150.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="redPints" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="438.0" prefWidth="300.0" style="-fx-background-color: red; -fx-alignment: center;" text="0" textFill="WHITE">
+               <font>
+                  <Font size="96.0" />
+               </font></Label>
+            <Label fx:id="redWarning" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="288.0" prefWidth="300.0" style="-fx-background-color: red; -fx-alignment: center;" text="0" textFill="#eeee03" GridPane.rowIndex="1">
+               <font>
+                  <Font size="70.0" />
+               </font></Label>
+            <Label fx:id="bluePints" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="443.0" prefWidth="300.0" style="-fx-background-color: blue; -fx-alignment: center;" text="0" textFill="WHITE" GridPane.columnIndex="1">
+               <font>
+                  <Font size="96.0" />
+               </font></Label>
+            <Label fx:id="blueWarning" ellipsisString="#eeee03" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="217.0" prefWidth="821.0" style="-fx-background-color: blue; -fx-alignment: center;" text="0" textAlignment="CENTER" textFill="#d6f207" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="70.0" />
+               </font></Label>
+            <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-alignment: right;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#blueAddWarning" prefHeight="41.0" prefWidth="128.0" text="+" />
+                        <Button mnemonicParsing="false" onAction="#blueRemoveWarning" prefHeight="49.0" prefWidth="137.0" text="-" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#blueRemovePoint" prefHeight="26.0" prefWidth="151.0" text="- p" />
+                        <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#blueAddPoint" prefHeight="23.0" prefWidth="193.0" text="+ p" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
+               <children>
+                  <VBox prefHeight="41.0" prefWidth="156.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#redAddPoint" prefHeight="58.0" prefWidth="179.0" text="+ p" />
+                        <Button mnemonicParsing="false" onAction="#redRemovePoint" prefHeight="26.0" prefWidth="191.0" text="- p" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#redAddWarnind" prefHeight="26.0" prefWidth="131.0" text="+" />
+                        <Button mnemonicParsing="false" onAction="#redRemoveWarning" prefHeight="47.0" prefWidth="103.0" text="-" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </GridPane>
+      <HBox prefHeight="0.0" prefWidth="1632.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <TextField fx:id="redId" promptText="red" />
+                  <TextField fx:id="blueId" promptText="blue" />
+               </children>
+            </VBox>
+            <VBox prefHeight="122.0" prefWidth="130.0">
+               <children>
+                  <TextField fx:id="numberOfRounds" promptText="num" />
+                  <TextField fx:id="roundTime" promptText="time" />
+               </children>
+            </VBox>
+            <Button mnemonicParsing="false" onAction="#getPoints" prefHeight="63.0" prefWidth="151.0" text="Button" />
+            <Button mnemonicParsing="false" onAction="#doTime" prefHeight="87.0" prefWidth="583.0" text="Start/Pause/Countinue" />
+         </children>
+      </HBox>
+   </children>
+</VBox>
